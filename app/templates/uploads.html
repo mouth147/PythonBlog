@@ -1,0 +1,22 @@
+{% extends 'adminbase.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <form action="/uploads" method="post" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                {{ form.photo }}
+                <input type="submit" value="Upload">
+            </form>
+        </div><!-- END COL -->
+    </div><!-- END ROW -->
+    <hr>
+    <div class="row">
+    {% for i in imgs %}
+        <div class="col-sm-4">
+            <a href="{{ url_for('static', filename='images/') + i }}"><img src="{{ url_for('static', filename='images/') + i }}" class="img-responsive" style="padding:5px"></a>
+        </div><!-- END COL -->
+    {% endfor %}
+    </div><!-- END ROW -->
+</div><!-- END CONTAINER -->
+{% endblock %}

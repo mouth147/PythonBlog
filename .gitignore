@@ -1,0 +1,15 @@
+# NONE OF UR BUSINESS
+blogwebsite.pem
+
+# databases
+*.db
+
+# pictures
+*.jpg
+*.jpeg
+
+# virtualenv
+flask
+
+# python files
+*.pyc

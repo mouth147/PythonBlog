@@ -1,0 +1,52 @@
+<html lang="en">
+    <head>
+        {% if title %}
+        <title> {{ title }} </title>
+        {% else %}
+        <title> Admin Panel </title>
+        {% endif %}
+
+        <!-- BOOTSTRAP CSS -->
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+
+        <!-- MARKDOWN CSS -->
+        <link rel="stylesheet" href="../static/css/bootstrap-markdown.min.css">
+
+        <!-- JQUERY -->
+        <script src="../static/js/jquery.min.js"></script>
+        <!-- BOOTSTRAP JS -->
+        <script src="../static/js/bootstrap.min.js"></script>
+ 
+        <!-- MARKED -->
+        <script src="../static/js/marked.js"></script>
+        <!-- MARKDOWN JS -->
+        <script src="../static/js/bootstrap-markdown.js"></script>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div> <!-- NAVBAR-HEADER -->
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('admin') }}">Admin Home</a></li>
+                    <li><a href="{{ url_for('index') }}">Blog Home</a></li>
+                    <li><a href="{{ url_for('create') }}">New Post</a></li>
+                    <li><a href="{{ url_for('upload') }}">Uploads</a></li>
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                </ul>
+            </div> <!-- COLLAPSE NAVBAR-COLLAPSE -->
+        </div> <!-- CONTAINER -->
+    </nav> <!-- NAVBAR -->
+    {% block content %}{% endblock %}
+    </body>
+</html>    

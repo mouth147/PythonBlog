@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {% if current_user.is_authenticated %}
+                <a class="btn btn-default" href="{{ url_for('edit', slug = posts.slug) }}">Edit</a>
+                {% endif %}
+            <h1>{{ posts.title }}</h1>
+            <div class="time">
+                <p class="text-right">Posted on {{ posts.timestamp.strftime('%B %d, %Y %-I:%M%p') }}</p>
+            </div>
+            <br>
+                {{ posts.body|markdown }}
+        </div>
+    </div>
+</div>
+{% endblock %}

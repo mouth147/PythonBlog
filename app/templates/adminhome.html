@@ -1,0 +1,54 @@
+{% extends 'adminbase.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+        </div> <!-- COL2 -->
+        <div class="col-sm-8">
+             
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        {% endwith %}
+
+            <h4>Drafts</h4>
+            <table class="table table-striped">
+                <tr>
+                    <th>Title</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                {% for post in drafts %}
+                <tr>
+                    <td><a href="{{ url_for('detail', slug = post.slug) }}">{{ post.title }}</a></td>
+                    <td><a href="{{ url_for('edit', slug = post.slug) }}">Edit</a></td>
+                    <td><a href="{{ url_for('delete', slug = post.slug) }}">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+            <h4>Posts</h4>
+            <table class="table table-striped">
+                <tr>
+                    <th>Title</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                {% for post in posts %}
+                <tr>
+                    <td><a href="{{ url_for('detail', slug = post.slug) }}">{{ post.title }}</a></td>
+                    <td><a href="{{ url_for('edit', slug = post.slug) }}">Edit</a></td>
+                    <td><a href="{{ url_for('delete', slug = post.slug) }}">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div><!-- COL 8 -->
+        <div class="col-sm-2">
+        </div><!-- COL 2 -->
+    </div><!-- ROW -->
+</div><!-- CONTAINER -->
+{% endblock %}

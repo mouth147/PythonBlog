@@ -1,0 +1,38 @@
+{% extends 'adminbase.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+        </div><!-- COL 2 -->
+        <div class="col-sm-8">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                    {% for message in messages %}
+                        <li> {{ message }} </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <h4> {{ action }} Post </h4>
+            <form action = "" method="post" name="New Post">
+                {{ form.hidden_tag() }}
+                <p>Title<br>
+                {{ form.title(size=35) }}<br>
+                </p>
+                <p>Body<br>
+                {{ form.body(rows = '22', cols = '80', **{'data-provide': 'markdown'}) }}<br>
+                </p>
+                <p>
+                {{ form.published }}
+                Published
+                </p><br>
+                <p><input type="submit" value="{{ value }}">
+                </p>
+            </form>
+        </div><!-- COL 8 -->
+        <div class="col-sm-2">
+        </div><!-- COL 2 -->
+    </div><!-- ROW -->
+</div> <!-- CONTAINER -->
+{% endblock %}

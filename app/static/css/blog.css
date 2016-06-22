@@ -1,0 +1,176 @@
+@font-face {
+	font-family: RockSalt;
+	src:url("/static/fonts/RockSalt.ttf")
+} 
+
+@font-face {
+	font-family:Shanti;
+	src:url("/static/fonts/Shanti-Regular.ttf")
+}
+body {
+	font-family:Shanti;
+}
+a {
+  color: #004466;
+}
+
+img {
+    max-width:100%;
+    display:block;
+}
+
+.bloghead {
+    color:#00334d;
+}
+
+.linkhead a:hover{
+    text-decoration:none;
+}
+
+.time {
+	width:100%;
+	border-top:1px solid #E2E2E2;
+	border-bottom:1px solid #E2E2E2;
+	padding-top:0.6em;
+	font-size:11px;
+}
+.jumbotron {
+	background: #000 url("/static/images/header.jpg") no-repeat fixed center;
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	color: #FFF;
+	height:500px;
+	font-family: RockSalt;
+}
+
+@media (max-width:768px) {
+	.jumbotron {
+		background: #000 url("/static/images/header.jpg") no-repeat scroll center;
+	}
+}
+
+.navbar-header {
+	font-family: RockSalt;
+}
+
+.vertical-center {
+	display:flex;
+	align-items: center;
+}
+.navbar-default {
+  background-color: #004352;
+  border-color: #006880;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #82a6c0;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #82a6c0;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #004352;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #82a6c0;
+  background-color: #006880;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #006880;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #82a6c0;
+  background-color: #006880;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #82a6c0;
+  background-color: #006880;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #82a6c0;
+  background-color: #006880;
+}
+.navbar-default .navbar-toggle {
+  border-color: #006880;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #006880;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #82a6c0;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #82a6c0;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #82a6c0;
+    background-color: #006880;
+  }
+}
+.affix {
+	padding: 0px;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	background-color:#004352;
+}
+
+.navbar.affix {
+	padding:0px;
+	background-color:#004352;
+}
+
+.navbar {
+	border-bottom: none;
+	padding:20px;
+	background-color:transparent;
+}
+
+.affix-top {
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}

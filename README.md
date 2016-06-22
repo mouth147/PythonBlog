@@ -32,5 +32,5 @@ db.session.add(u);db.session.commit()
 
 # Screenshots
 
-For screenshots visit [my website](www.mikebotti.com)!
+For screenshots visit [my website](http://www.mikebotti.com)!
 
